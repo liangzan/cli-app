@@ -1,0 +1,23 @@
+#!/user/bin/env node
+
+var argv = require('optimist').argv
+  , prompt = require('prompt')
+  , colors = require('colors')
+  , birdie = require('../lib/birdie');
+
+if (argv._.length > 0) {
+  search(argv._.join(' '));
+} else {
+  prompt.start();
+  prompt.get(['query'], function(err, result) {
+    search(result.query);
+  });
+}
+
+function search(query) {
+  var resultTypeOpt = argv.r || argv.resulttype || 'mixed';
+  birdie.search(query, resultTypeOpt, function(err, data) {
+    console.log(data);
+    console.log("completed".green);
+  });
+}

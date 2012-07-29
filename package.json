@@ -1,14 +1,19 @@
 {
-    "name": "",
+    "name": "jsreadme-cli-app",
     "version": "v0.0.1",
-    "description": "",
-    "keywords": [],
-    "repository": { "type": "git", "url": "" },
-    "author": "",
+    "description": "code samples for the cli app",
+    "keywords": ["cli", "twitter"],
+    "repository": { "type": "git", "url": "git@github.com:jsreadme/cli-app.git" },
+    "author": "Wong Liang Zan <zan@liangzan.net> (http://liangzan.net)",
     "engines": {
 	"node" : "~0.8",
 	"npm": "1"
     },
-    "dependencies": {},
+    "dependencies": {
+	"ntwitter": "~0.4.0",
+	"commander": "~1.0.0",
+	"colors": "~0.6.0-1",
+	"prompt": "~0.2.3"
+    },
     "devDependencies": {}
 }

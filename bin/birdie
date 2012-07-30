@@ -1,4 +1,4 @@
-#!/user/bin/env node
+#!/usr/local/bin/node
 
 var argv = require('optimist').argv
   , prompt = require('prompt')
